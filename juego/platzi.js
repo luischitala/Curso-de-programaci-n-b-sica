@@ -1,11 +1,14 @@
+var vp = document.getElementById("villaplatzi");
+var papel = vp.getContext("2d");
+var mapa = "tile.png";
 
-var z;
+var imagen = new Image();
+imagen.src = mapa;
+imagen.addEventListener("load",dibujar);
 
-for(var i=0; i<10; i++)
+function dibujar()
 {
-	z = aleatorio(0,3);
-	document.write(z + ", ");
-
+	papel.drawImage(imagen, 0,0);
 }
 
 function aleatorio(min, maxi)
