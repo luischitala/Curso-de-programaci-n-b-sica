@@ -4,6 +4,11 @@ var lineas = 30;
 var l = 0;
 var yi, xf;
 var colorcito = "#FAA";
+var texto = document.getElementById("texto");
+var boton = document.getElementById("botoncito");
+boton.addEventListener("click",dibujoPorClick);
+
+
 for(l=0; l < lineas; l++)
 {
 	yi = 10 * l;
@@ -22,4 +27,11 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
 	lienzo.lineTo(yinicial, yfinal);
 	lienzo.stroke();
 	lienzo.closePath();
+}
+
+function dibujoPorClick()
+
+{
+
+	alert("No me toques ahí");
 }
