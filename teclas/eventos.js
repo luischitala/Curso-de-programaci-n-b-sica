@@ -1,8 +1,9 @@
-document.addEventListener("keydown", dibujarTeclado);
+document.addEventListener("keyup", dibujarTeclado);
 
 
 
-function dibujarTeclado()
+function dibujarTeclado(evento)
 {
-	console.log("Tecla oprimida primo");
+
+	console.log(evento.keyCode);
 }
