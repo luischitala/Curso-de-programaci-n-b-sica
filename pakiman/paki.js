@@ -11,7 +11,12 @@ coleccion.push(new Pakiman("Tocinauro",120,40));
 
 for(var pakin of coleccion)
 {
-	console.log(pakin);
+	pakin.mostrar();
 
 }
 
+for(var x in coleccion[0])
+{
+
+	console.log(x);
+}
