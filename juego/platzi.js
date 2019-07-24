@@ -10,6 +10,11 @@ var fondo = {
 var vaca = {
 	url:"vaca.png",
 	cargaOk: false
+}
+
+var cerdo = {
+	url:"cerdo.png",
+	cargaOk: false
 };
 
 
@@ -22,6 +27,10 @@ vaca.objeto = new Image();
 vaca.objeto.src = vaca.url;
 vaca.objeto.addEventListener("load", cargarVacas);
 
+cerdo.objeto = new Image();
+cerdo.objeto.src = cerdo.url;
+cerdo.objeto.addEventListener("load", cargarCerdos);
+
 function cargarFondo()
 {
 	fondo.cargaOK = true;
@@ -31,6 +40,11 @@ function cargarFondo()
 function cargarVacas()
 {
 	vaca.cargaOK = true;
+	dibujar();
+}
+function cargarCerdos()
+{
+	cerdo.cargaOK = true;
 	dibujar();
 }
 
@@ -52,10 +66,16 @@ function dibujar()
 		var y = y * 60;
 		papel.drawImage(vaca.objeto, x,y);
 		}
-	
+	if(cerdo.cargaOK)
+	{
+		
+		papel.drawImage(cerdo.objeto, 0,0);
+		}
+		
+	}
 	}
 
-}
+
 
 
 function aleatorio(min, maxi)
