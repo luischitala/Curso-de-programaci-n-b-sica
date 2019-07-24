@@ -9,6 +9,11 @@ var Cauchin = new Pakiman("Cauchin",80,50);
 var Tocinauro = new Pakiman("Tocinauro",120,40);
 
 
+var coleccion = [];
+coleccion.push(Cauchin);
+coleccion.push(Pokacho);
+coleccion.push(Tocinauro);
+
 Pokacho.mostrar();
 Cauchin.mostrar();
 Tocinauro.mostrar();
