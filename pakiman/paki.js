@@ -4,16 +4,14 @@ imagenes["Pokacho"] = "pollo.png";
 imagenes["Tocinauro"] = "cerdo.png";
 
 
-var Pokacho = new Pakiman("Pokacho",100,30);
-var Cauchin = new Pakiman("Cauchin",80,50);
-var Tocinauro = new Pakiman("Tocinauro",120,40);
-
-
 var coleccion = [];
-coleccion.push(Cauchin);
-coleccion.push(Pokacho);
-coleccion.push(Tocinauro);
+coleccion.push(new Pakiman("Pokacho",100,30));
+coleccion.push(new Pakiman("Cauchin",80,50));
+coleccion.push(new Pakiman("Tocinauro",120,40));
 
-Pokacho.mostrar();
-Cauchin.mostrar();
-Tocinauro.mostrar();
+for(var pakin of coleccion)
+{
+	console.log(pakin);
+
+}
+
