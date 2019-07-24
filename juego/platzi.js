@@ -1,6 +1,18 @@
+
+document.addEventListener("keydown", mover)
 var vp = document.getElementById("villaplatzi");
 var papel = vp.getContext("2d");
 var mapa = "tile.png";
+var xP = 200;
+var yP = 350;
+
+var flechas =
+    {
+        LEFT: 37,
+        UP: 38,
+        RIGHT: 39,
+        DOWN: 40
+    }
 
 var fondo = {
 	url: "tile.png",
@@ -47,6 +59,10 @@ function cargarCerdos()
 	cerdo.cargaOK = true;
 	dibujar();
 }
+function dibujarCerdo()
+{
+	papel.drawImage(cerdo.objeto, xP,yP);
+}
 
 function dibujar()
 {
@@ -67,16 +83,46 @@ function dibujar()
 		papel.drawImage(vaca.objeto, x,y);
 		}
 	if(cerdo.cargaOK)
-	{
-		
-		papel.drawImage(cerdo.objeto, 0,0);
+		{
+		dibujarCerdo()
 		}
 		
 	}
 	}
 
+function mover (teclaOprimida)
+    {
+        switch (teclaOprimida.keyCode)
+            {
+                case flechas.UP:
+                yP--;
+
+             	papel.drawImage(fondo.objeto, 0,0);
+                dibujarCerdo();
+                break;
+                    
+                case flechas.DOWN:
+                yP++;
+                papel.drawImage(fondo.objeto, 0,0);
+                dibujarCerdo();
+                break;
+                
+                case flechas.RIGHT:
+                xP++;
+                papel.drawImage(fondo.objeto, 0,0);
+                dibujarCerdo();
+                break;
+                    
+                case flechas.LEFT:
+                xP--;
+                papel.drawImage(fondo.objeto, 0,0);
+                dibujarCerdo();
+                break;    
+            }
 
 
+
+}
 
 function aleatorio(min, maxi)
 {
