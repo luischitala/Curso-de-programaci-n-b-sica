@@ -119,9 +119,6 @@ function mover (teclaOprimida)
                 dibujarCerdo();
                 break;    
             }
-
-
-
 }
 
 function aleatorio(min, maxi)
